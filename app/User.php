@@ -6,9 +6,10 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Overtrue\LaravelFollow\Traits\CanLike;
+use Laravel\Passport\HasApiTokens;
 class User extends Authenticatable
 {
-    use Notifiable,CanLike;
+    use Notifiable,CanLike,HasApiTokens;
 
     /**
      * The attributes that are mass assignable.
